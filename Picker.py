@@ -24,13 +24,15 @@ def click_point(events , x , y , flags ,params):
                  Positions.pop(i)
     with open("Park_Positions" , "wb") as f:
         pickle.dump(Positions, f)
-        
 while 1:
     area_img=cv.imread('Area_img.png')
     for pos in Positions:
     
        cv.rectangle(area_img , pos,(pos[0] + width,pos[1]+ height) ,(255,0,0) ,2)
-       
+    
+    cv.namedWindow("Area", cv.WINDOW_NORMAL)  
+    cv.resizeWindow("Area", 800, 600)  
+
     cv.imshow("Area" ,area_img)
     cv.setMouseCallback("Area" , click_point)
     cv.waitKey(1)
