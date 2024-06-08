@@ -10,10 +10,10 @@ capture = cv.VideoCapture("Parking_area.mp4")
 with open("Park_Positions" , "rb") as f:
      positions = pickle.load(f)
      
-account_sid = 'AC60049a32929ac5312c37a2a579f21e36'
-auth_token = '77d3098c3bc8f73494b46b0d1f90d394'
-twilio_number = '+12074666985'
-admin_number = '+923484789242'
+account_sid = ''
+auth_token = ''
+twilio_number = ''
+admin_number = ''
 
 client = Client(account_sid, auth_token)
 notification_sent = False
